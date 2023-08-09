@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add Restaurant</h1>
+  <%= simple_form_for [@restaurant] do |f| %>
+   <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+  <%= f.label :address %>
+  <%= f.text_field :address, class: 'form-control' %>
+  <%= f.submit 'Submit', class: 'btn btn-primary mt-3' %>
+<% end %>
+<p><%= link_to 'Back', new_restaurant_path(@restaurant), class: 'btn btn-light'  %></p>
+</div>
